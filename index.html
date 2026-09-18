@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex | WildDawn</title>
+    <style>
+        body { font-family: sans-serif; background: #1a1a1a; color: white; display: flex; flex-direction: column; align-items: center; padding: 50px 20px; }
+        .avatar { width: 150px; height: 150px; border-radius: 50%; background: #333; margin-bottom: 20px; border: 3px solid #ff4757; }
+        h1 { margin: 0; }
+        p { color: #aaa; margin-bottom: 30px; }
+        .links { width: 100%; max-width: 400px; }
+        .btn { display: block; width: 100%; padding: 15px; margin-bottom: 15px; text-align: center; text-decoration: none; color: white; border-radius: 8px; font-weight: bold; transition: 0.3s; }
+        .btn-itch { background: #ff4757; }
+        .btn-boosty { background: #f15f2c; }
+        .btn-substar { background: #2d3436; border: 2px solid #00cec9; }
+        .btn:hover { transform: scale(1.02); opacity: 0.9; }
+    </style>
+</head>
+<body>
+    <div class="avatar" style="background-image: url('avatar'); background-size: cover;"></div>
+    <h1>Flex</h1>
+    <p>Developer of Wild Dawn</p>
+    
+    <div class="links">
+        <a href="https://flex-unreal.itch.io/wilddawn" class="btn btn-itch">Itch.io (Wild Dawn)</a>
+        <a href="https://boosty.to/developeralex" class="btn btn-boosty">Boosty</a>
+        <a href="https://subscribestar.art/alexreal" class="btn btn-substar">SubscribeStar</a>
+    </div>
+</body>
+</html>
