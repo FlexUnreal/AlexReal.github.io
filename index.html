@@ -1,29 +1,74 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Wild Dawn</title>
-    <style>
-        body { font-family: sans-serif; background: #1a1a1a; color: white; display: flex; flex-direction: column; align-items: center; padding: 50px 20px; }
-        .avatar { width: 150px; height: 150px; border-radius: 50%; background: #333; margin-bottom: 20px; border: 3px solid #ff4757; }
-        h1 { margin: 0; }
-        p { color: #aaa; margin-bottom: 30px; }
-        .links { width: 100%; max-width: 400px; }
-        .btn { display: block; width: 100%; padding: 15px; margin-bottom: 15px; text-align: center; text-decoration: none; color: white; border-radius: 8px; font-weight: bold; transition: 0.3s; }
-        .btn-itch { background: #ff4757; }
-        .btn-boosty { background: #f15f2c; }
-        .btn-substar { background: #00cec9; }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width = device-width, inital-scale=1.0">
+	<title>Alex Wild Dawn</title>
+	<style>
+		body {
+			font-family: sans-serif;
+			background: #1a1a1a;
+			color: white;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 50px 20px;
+		}
+		
+		.avatar {
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			background: #333;
+			margin-bottom: 20px;
+			border: 3px solid #000000;
+		}
+		h1 { margin: 0;}
+		p { color: #aaa; margin-bottom: 30px; }
+		.links { width: 100%; max-width: 400px; }
+		.btn {display: block; width: 100%; padding: 15px; margin-bottom: 15px; text-align: center; text-decoration: none; color: white; border-radius: 8px; font-weight: bold; transition: 0.3s;}
+		.btn-itch { background: #ff4757; }
+		.btn-boosty { background: #f15f2c; }
+		.btn-substar { background: #009688; }
+		.btn-discord { background: #5662F6; }
+		
+		.supporters {
+			flex: 1;
+			text-align: left;
+		}
+		
+		.supporters-grid {
+			flex: 1;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 20px,
+			width: 100%; max-width: 800px;
+		}
+		
+		.supporter-card {
+			border: 1px solid #555;
+			padding: 10px;
+			text-align: center;
+		}
+	</style>
 </head>
+
 <body>
-    <div class="avatar" style="background-image: url('https://raw.githubusercontent.com/FlexUnreal/AlexReal.github.io/refs/heads/main/moew_avtr.png'); background-size: cover;"></div>
-    <h1>Alex Real</h1>
-    <p>hii hii, im developer of Wild Dawn!</p>
-    
-    <div class="links">
-        <a href="https://flex-unreal.itch.io/wilddawn" class="btn btn-itch">Itch.io (Wild Dawn)</a>
-        <a href="https://boosty.to/developeralex" class="btn btn-boosty">Boobsty</a>
-        <a href="https://subscribestar.art/alexreal" class="btn btn-substar">SubmitMeStar</a>
-    </div>
+	
+	<div class="avatar" style="background-image: url('https://raw.githubusercontent.com/FlexUnreal/AlexReal.github.io/refs/heads/main/moew_avtr.png'); background-size: cover;"></div>
+	<h1>Alex Real</h1>
+	
+	<div class="links">
+		<a href="https://flex-unreal.itch.io/wilddawn" class="btn btn-itch">Itch.io (Wild Dawn)</a>
+		<a href="https://boosty.to/developeralex" class="btn btn-boosty">Boobsty</a>
+		<a href="https://subscribestar.art/alexreal" class="btn btn-substar">SubmitMeStar</a>
+		<a href="https://discord.gg/ykaHKxA4WU" class="btn btn-discord">Discord Server</a>
+	</div>
+	
+	<div class="supporters">
+		<h2>big kiss for my supporters:</h2>
+		
+	</div>
+	
 </body>
+
 </html>
