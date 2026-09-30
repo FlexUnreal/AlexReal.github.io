@@ -1,5 +1,6 @@
 <html lang="en">
 <head>
+	
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width = device-width, inital-scale=1.0">
 	<title>Alex Wild Dawn</title>
@@ -8,10 +9,8 @@
 			font-family: sans-serif;
 			background: #1a1a1a;
 			color: white;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			padding: 50px 20px;
+			 height: 100vh;
+			overflow: hidden;
 		}
 		
 		.avatar {
@@ -31,41 +30,254 @@
 		.btn-substar { background: #009688; }
 		.btn-discord { background: #5662F6; }
 		
-		.supporters {
-			flex: 1;
-			text-align: left;
-		}
-		
-		.supporters-grid {
-			flex: 1;
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-			gap: 20px,
-			width: 100%; max-width: 800px;
-		}
-		
-		.supporter-card {
-			border: 1px solid #555;
-			padding: 10px;
+		.description {
+			color: #cccccc;
 			text-align: center;
+			max-width: 500px;
+			line-height: 1.5;
+			margin-bottom: 30px;
+		}
+		
+		.main-container {
+			display: flex;
+			overflow-y: auto;
+			width: 100%;
+			height: 100vh;
+			padding: 0;
+			margin: 0;
+		}
+		
+		.devlog-sidebar {
+			width: 400px;
+			background: #252525;
+			padding: 20px;
+			border-right: 1px solid #444;
+			display: flex;
+			flex-direction: column;
+			min-height: 0;
+		}
+
+		.devlog-content {
+			flex: 1;
+			overflow-y: auto;
+			font-size: 14px;
+			line-height: 1.6;
+			color: #ccc;
+			white-space: pre-wrap;
+			overflow-x: hidden;
+			word-wrap: break-word;
+		}
+		
+		.profile-section {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 20px;
+		}
+		
+		.devlog-content::-webkit-scrollbar {
+			width: 8px;
+		}
+		
+		.devlog-content::-webkit-scrollbar-track {
+			background: #1a1a1a;
+		}
+		
+		.devlog-content::-webkit-scrollbar-thumb {
+			background: #444; 
+			border-radius: 4px; /* скругление */
+		}
+		
+		.devlog-content::-webkit-scrollbar-thumb:hover {
+			background: #555;
 		}
 	</style>
 </head>
 
 <body>
 	
-	<div class="avatar" style="background-image: url('https://raw.githubusercontent.com/FlexUnreal/AlexReal.github.io/refs/heads/main/moew_avtr.png'); background-size: cover;"></div>
-	<h1>Alex Real</h1>
-	
-	<div class="links">
-		<a href="https://flex-unreal.itch.io/wilddawn" class="btn btn-itch">Itch.io (Wild Dawn)</a>
-		<a href="https://boosty.to/developeralex" class="btn btn-boosty">Boobsty</a>
-		<a href="https://subscribestar.art/alexreal" class="btn btn-substar">SubmitMeStar</a>
-		<a href="https://discord.gg/ykaHKxA4WU" class="btn btn-discord">Discord Server</a>
-	</div>
-	
-	<div class="supporters">
-		<!--<h2>big kiss for my supporters:</h2>-->
+	<div class="main-container">
+		<div class="devlog-sidebar">
+			<h3>Early Access: 0.1.7a changelog</h3>
+			<div class="devlog-content">
+## Gameplay
+- The game loop has been significantly accelerated.
+- World time has been added.
+- Regeneration and digestion are no longer accelerated while resting.
+- After the `cannabisSmoke` effect ends, `cannabisSmoke_hangover` is applied.
+- Model shaking while walking has been reduced by approximately 2x.
+- The Blindness trait has been removed.
+- Item durability is no longer required for butchering.
+- Equipped items can now be selected in the item selection menu.
+- Books and notes can now be read.
+- Magic learning has been reworked: instead of gaining experience by killing enemies, players must read a Scroll of Knowledge to gain a skill point.
+- Scrolls of Knowledge can be found in Roguelike mode.
+- Sex mechanics have been added.
+- Energy regeneration numbers have been removed.
+- Enemies now drop blood (item) when damaged.
+
+## Combat
+- Firearm damage calculation has been reworked.
+- Damage, range, and armor penetration now depend on ammunition caliber rather than the weapon itself.
+- Weapon spread has been added.
+- Shotgun ammunition has been reworked. Instead of generic "shotgun shells", different calibers and ammunition types are now specified.
+
+## Items
+- Added `ScrollKnowledge`.
+- Added `SelfmadePistol9x20`.
+- Added `SelfmadeRifle9x20`.
+- Added `SelfmadeRifle8x54`.
+- Added `SelfmadeRifle18x70`.
+- Added `NailBat`.
+- Added `AmmoPress`.
+- Added `survivalBrochure`.
+- Added ammunition:
+  - `Ammo8x54`
+  - `Ammo9x20`
+  - `Ammo18x70_slug`
+  - `Ammo18x70_buckshot`
+  - `Ammo18x70_birdshot`
+  - `AmmoShell8x54`
+  - `AmmoShell9x20`
+  - `AmmoShell18x70`
+- Added:
+  - `ChitinCrushed`
+  - `BoneCrushed`
+  - `LiquidWater`
+  - `LiquidPiss`
+  - `LiquidMilk`
+  - `LiquidCum`
+  - `LiquidCumSpider`
+  - `LiquidGirlcum`
+  - `LiquidBlood`
+  - `LiquidBloodInsect`
+  - `LiquidBeer`
+  - `PilotBurner`
+  - `Mattress`
+  - `Pillow`
+  - `Blanket`
+
+## Crafting
+- Added `Instrument.AmmoPress` as a crafting tool.
+- Added the `LongStick` recipe.
+- Added recipes for:
+  - `NailBat`
+  - `SelfmadeRifle9x20`
+  - `SelfmadeRifle8x54`
+  - `SelfmadeRifle18x70`
+- Bone and Chitin can now be dismantled.
+
+## Equipment
+- The equipment system has been reworked. Equipment for individual body parts is now planned instead of traditional equipment slots.
+- The new equipment system will allow players to equip two weapons at once, with support for up to four or potentially six weapons planned for the future.
+
+## World & Dungeons
+- Liquids have been added to the game, currently implemented as items.
+- Water can now be found in boilers.
+- Water barrels can now appear in dungeons.
+- Added new dungeon loot tables, recipes, and room types.
+- Added new room themes:
+  - `dungeon_bedroom`
+  - `dungeon_barracks`
+  - `dungeon_kitchen`
+  - `dungeon_ammunition_depot`
+
+## Loottable
+- Added `ammunition_depot_poor` loottable.
+- Added `beer_barrel_low`
+- Added `bed`
+
+## Tiles
+- Added:
+  - `WallStove`
+  - `WallFridge`
+  - `WallBed`
+  - `WallCampfire`
+  - `WallGunCabinet`
+- `WallStove` now drops 4 `PilotBurner` and is classified as hard.
+
+## Disassemble
+- Added `disassemble` for:
+  - `SkullWolf`
+  - `SkullSauri`
+  - `SkullBee`
+  - `Tube`
+  - `Rope`
+  - `IronWire`
+
+## Interface
+- The interface system has been globally redesigned and optimized and is still under development.
+- The crafting interface has been redesigned.
+- The item pickup interface has been redesigned.
+- Added an item drop interface.
+- Pressing **Enter** now opens the player action menu, which includes crafting and item pickup.
+- Press **G** to pick up items.
+- The disclaimer menu has been redesigned.
+- The main menu has been redesigned.
+- The settings interface has been redesigned.
+- The world creation interface has been redesigned.
+- The character creation interface has been redesigned.
+- The controls/help interface has been redesigned.
+- Added descriptions for food and water.
+- Improved log text so that it no longer extends beyond the interface boundaries.
+
+## Characters & Anatomy
+- Added more first and last names for characters.
+- Fixed a bug where all characters were being given names intended for intelligent characters.
+- The skull is no longer a separate attribute in entity data. It is now treated as part of the anatomy used for butchering.
+
+## Visuals
+- The game's font has been redrawn.
+- The old `fnt_miniWild` was too small at 6 pixels, while `fnt_mediumWild` was too large at 16 pixels.
+- Both fonts have been replaced with the new 12-pixel `fnt_mediumWild`.
+- Resprited:
+  - `spr_ammo_18x70Drop`
+  - `spr_ammo_8x54Drop`
+  - `spr_ammo_9x20Drop`
+- Items lying on the floor are no longer vertically mirrored.
+
+## Localization
+- Localization now supports `.json` format.
+- Fixed translation keys.
+
+## Optimization
+- Significantly optimized the game loop.
+- Optimized skill cooldown ticks.
+- Optimized buff/debuff ticks.
+- Optimized hunger, thirst, and digestion ticks.
+- Made minor AI optimizations.
+
+## Fixes
+- Fixed a crash during digestion.
+- Fixed a crash during vore.
+- Fixed a bug that allowed a character to be masturbated from a distance.
+- Fixed a bug with block macros.
+- Updated the version after fixing the block macro bug.
+- Dead bodies no longer disappear when moving to another floor.
+
+## Code and Cleanup
+- Removed a large amount of old and unused code.
+- Added the `__Recipes_manager`.
+			</div>
+		</div>
+		
+		<div class="profile-section">
+			<div class="avatar" style="background-image: url('https://raw.githubusercontent.com/FlexUnreal/AlexReal.github.io/refs/heads/main/moew_avtr.png'); background-size: cover;"></div>
+			<h1>Alex Real</h1>
+			
+			<p class="description">
+				Hii!!
+			</p>
+			
+			<div class="links">
+				<a href="https://flex-unreal.itch.io/wilddawn" class="btn btn-itch">Itch.io (Wild Dawn)</a>
+				<a href="https://boosty.to/developeralex" class="btn btn-boosty">Boobsty *Early Access</a>
+				<a href="https://subscribestar.art/alexreal" class="btn btn-substar">SubmitMeStar *Early Access</a>
+				<a href="https://discord.gg/ykaHKxA4WU" class="btn btn-discord">Discord Server</a>
+			</div>
+		</div>
 		
 	</div>
 	
